@@ -2,7 +2,7 @@
 
 This project implements a **real-time sentiment analysis system** with an **end-to-end data pipeline** that processes simulated social media posts and visualizes live sentiment analytics on a **Streamlit dashboard**.
 
-The entire architecture is built in **Python**, integrating **FastAPI**, **Hugging Face Transformers**, **SQLite**, and **Streamlit** — no cloud services or GPU required.
+The entire architecture is built in **Python**, integrating **FastAPI**, **Hugging Face Transformers**, **SQLite**, and **Streamlit**, no cloud services or GPU required.
 
 ---
 
@@ -150,4 +150,5 @@ At first, it will show **“Waiting for data...”** — within 10–15 seconds,
 
 ## Author
 Developed by **Abhinav Harbola**  
+
 Data Engineering | NLP | Real-Time Systems
