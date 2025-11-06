@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+transformers
+torch
+pandas
+requests
+streamlit
+wordcloud
+matplotlib
