@@ -36,19 +36,19 @@ This system is composed of **three independent Python scripts**, each running in
 
 ## How It Works
 
-### `data_feeder.py` — The Stream Simulator
+### `data_feeder.py` : The Stream Simulator
 - Reads from the **Sentiment140** dataset.
-- Randomly selects a tweet every **1–3 seconds**.
+- Randomly selects a tweet every **1-3 seconds**.
 - Sends it via an HTTP POST request to the **FastAPI backend**.
 
-### `backend_api.py` — The Processing Engine
+### `backend_api.py` : The Processing Engine
 - A **FastAPI** server that listens for incoming tweets.
 - Loads a **Hugging Face sentiment model**:  
   `distilbert-base-uncased-finetuned-sst-2-english`
 - Processes each tweet → predicts **Positive / Negative** sentiment + confidence score.
 - Saves results to **SQLite (sentiment.db)** with timestamp.
 
-### `sentiment_dashboard.py` — The Interactive Dashboard
+### `sentiment_dashboard.py` : The Interactive Dashboard
 - A **Streamlit** web application connected to `sentiment.db`.
 - Auto-refreshes every **3 seconds** to display live updates.
 - Shows:
@@ -85,7 +85,7 @@ and place it in the project directory.
 
 You’ll need **three terminals** to run the complete system.
 
-### Terminal 1 — Run the Backend API
+### Terminal 1 : Run the Backend API
 
 Start the FastAPI server:
 
@@ -100,7 +100,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000
 
 ---
 
-### Terminal 2 — Run the Data Feeder
+### Terminal 2 : Run the Data Feeder
 
 In a new terminal, run:
 
@@ -118,7 +118,7 @@ Leave this terminal running.
 
 ---
 
-### Terminal 3 — Run the Streamlit Dashboard
+### Terminal 3 : Run the Streamlit Dashboard
 
 In the third terminal, start the dashboard:
 
@@ -132,7 +132,7 @@ The dashboard will open automatically in your default browser at:
 http://localhost:8501
 ```
 
-At first, it will show **“Waiting for data...”** — within 10–15 seconds, it will begin displaying **live sentiment analytics** as tweets flow in.
+At first, it will show **“Waiting for data...”**, within 10–15 seconds, it will begin displaying **live sentiment analytics** as tweets flow in.
 
 ---
 
@@ -152,3 +152,4 @@ At first, it will show **“Waiting for data...”** — within 10–15 seconds,
 Developed by **Abhinav Harbola**  
 
 Data Engineering | NLP | Real-Time Systems
+
